@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "api-boilerplate"
+version = "0.1.0"
+description = "Django Ninja API boilerplate with Celery and Channels"
+authors = ["Your Name <your.email@example.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+# Core Framework
+django = "^5.0"
+django-ninja = "^1.0"
+
+# Database & Cache
+psycopg2-binary = "^2.9"
+redis = "^5.0"
+dj-database-url = "^2.1"
+
+# Authentication & Security (API Key only)
+cryptography = "^41.0"
+
+# Background Tasks
+celery = "^5.3"
+gevent = "^23.0"
+django-celery-beat = "^2.5"
+
+# WebSockets
+channels = "^4.0"
+channels-redis = "^4.1"
+daphne = "^4.0"
+
+# Admin & UI
+django-jazzmin = "^3.0.1"
+
+# Logging
+django-db-logger = "^0.1.12"
+
+# Monitoring
+flower = "^2.0"
+
+# Async utilities
+asgiref = "^3.7"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.0"
+isort = "^5.12"
+flake8 = "^6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api" 
