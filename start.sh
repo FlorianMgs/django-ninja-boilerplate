@@ -6,4 +6,4 @@ source .env
 set +a  # Turn off automatic export
 
 cd docker
-docker compose up --build "$@" 
+docker compose -p ${PROJECT_NAME} up --build "$@" 

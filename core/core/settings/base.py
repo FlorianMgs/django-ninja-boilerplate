@@ -34,6 +34,8 @@ def optional_env(key, default=None, cast=str):
     return cast(value) if value else default
 
 
+PROJECT_NAME = required_env("PROJECT_NAME")
+
 # Build paths inside the project
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -250,11 +252,11 @@ LOGGING = {
 
 # Django Jazzmin Configuration
 JAZZMIN_SETTINGS = {
-    "site_title": "API Boilerplate Admin",
-    "site_header": "API Boilerplate",
-    "site_brand": "API Boilerplate",
-    "welcome_sign": "Welcome to API Boilerplate Admin",
-    "copyright": "API Boilerplate",
+    "site_title": f"{PROJECT_NAME} Admin",
+    "site_header": PROJECT_NAME,
+    "site_brand": PROJECT_NAME,
+    "welcome_sign": f"Welcome to {PROJECT_NAME} Admin",
+    "copyright": PROJECT_NAME,
     "search_model": "auth.User",
     "user_avatar": None,
     # Top Menu
